@@ -1,8 +1,10 @@
 import utils
+import by_indix
 todo=[]
 options=["1.add a task",
          "2.show all tasks",
-         "3.exit"]
+         "3.exit",
+         "4.delete"]
 def main(tasks,options):
     get_out = True
     while  get_out == True:
@@ -17,7 +19,8 @@ def main(tasks,options):
             task_shower=utils.show_all_tasks(tasks)
         elif choice=='3' or choice=="leave":
             get_out=utils.exit()
-
+        elif choice=='4' or choice=="delete":
+            delete=by_indix.delete_task(tasks,index)
         
 
         
